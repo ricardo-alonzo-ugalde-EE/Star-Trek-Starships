@@ -28,7 +28,7 @@ int main()
     // Relevant variables
     srand(time(0));
     std::vector < int > enemyRound;
-    vector<Factions*> swGalaxy;
+    vector<Factions*> swGalaxy; // vector pointer that points to the base class factions 
     int fact_select = 0;
     bool playerAlive = true;
     string playerName = "";
@@ -38,15 +38,14 @@ int main()
     int playerSkill = rand() % 500;
     int playerSkillSwap = rand() % 1000;
     int force_select = 0;
-    char switcharoo;
+    char switcharoo; // used to switch player level
     int saberForm;
     int fallenEnemies = 0;
     int shipSelect;
     
     
     
-    
-    //sithApprentice.playerSkillSwap = rand() % 1000
+     //sithApprentice.playerSkillSwap = rand() % 1000
    
 
     // Main title sequence
@@ -100,7 +99,7 @@ int main()
             cin >> switcharoo;
             if (switcharoo == 'y' || switcharoo == 'Y')
             {
-                swGalaxy[3]->swapPowerLevel(&playerSkill, &playerSkillSwap);
+                swGalaxy[0]->swapPowerLevel(&playerSkill, &playerSkillSwap);
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
                 if (playerSkillSwap <= playerSkill)
                 {
