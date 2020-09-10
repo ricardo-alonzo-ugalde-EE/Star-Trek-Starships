@@ -35,8 +35,8 @@ int main()
     int enemiesDefeated = 0;
     int enemieCount = 1;
     int enemySkill = 0;
-    int playerSkill = rand() % 500;
-    int playerSkillSwap = rand() % 1000;
+    int playerSkill = rand() % 100;
+    int playerSkillSwap = rand() % 200;
     int force_select = 0;
     char switcharoo; // used to switch player level
     int saberForm;
@@ -397,8 +397,8 @@ int main()
             if (enemySkill > 20)
             {
                 std::this_thread::sleep_for(std::chrono::milliseconds(2500));
+                swGalaxy[1]->enemyNameCreate(); cout << ", a rebellion leader has entered the battlefield.\n" << endl;
                 cout << setfill('`') << setw(77) << "`" << endl;
-                swGalaxy[1]->enemyNameCreate(); cout << ", a rebellion leader has entered the battlefield." << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
                 cout << endl << playerName << ": Nothing personal, Thrawn's orders." << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2500));
@@ -432,7 +432,8 @@ int main()
             else if (enemySkill >= 11 && enemySkill <= 20)
             {
                 cout << setfill('`') << setw(77) << "`" << endl;
-                swGalaxy[1]->enemyNameCreate(); cout << ", a  rebel soldier  has entered the battlefield." << endl;
+                swGalaxy[1]->enemyNameCreate(); cout << ", a  rebel soldier  has entered the battlefield.\n" << endl;
+                cout << setfill('`') << setw(77) << "`" << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2500));
                 cout << endl << playerName << ": Nothing personal, Thrawn's orders." << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2500));
@@ -468,7 +469,8 @@ int main()
             else if (enemySkill <= 10)
             {
                 cout << setfill('`') << setw(77) << "`" << endl;
-                swGalaxy[1]->enemyNameCreate(); cout << ", a rebel sympathizer entered the battlefield." << endl;
+                swGalaxy[1]->enemyNameCreate(); cout << ", a rebel sympathizer entered the battlefield.\n" << endl;
+                cout << setfill('`') << setw(77) << "`" << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
                 cout << endl << playerName <<  ": Nothing personal, Thrawn's orders." << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2500));
@@ -652,7 +654,7 @@ int main()
             */
             if (enemySkill > 20)
             {
-                swGalaxy[2]->enemyNameCreate(); cout << ", a Sith Lord has entered the battlefield." << endl;
+                swGalaxy[2]->enemyNameCreate(); cout << ", a Sith Lord has entered the battlefield.\n" << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
                 cout << playerName << ": There is no emotion, there is peace" << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
@@ -669,7 +671,7 @@ int main()
 
             else if (enemySkill >= 11 && enemySkill <= 20)
             {
-                swGalaxy[2]->enemyNameCreate(); cout << ", a Sith Marauder has entered the battlefield." << endl;
+                swGalaxy[2]->enemyNameCreate(); cout << ", a Sith Marauder has entered the battlefield.\n" << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
                 cout << playerName << ": There is no ignorance, there is knowledge." << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
@@ -685,7 +687,7 @@ int main()
 
             else if (enemySkill <= 10)
             {
-                swGalaxy[2]->enemyNameCreate(); cout << ", a sith Acolyte has entered the battlefield." << endl;
+                swGalaxy[2]->enemyNameCreate(); cout << ", a sith Acolyte has entered the battlefield.\n" << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
                 cout << playerName << ": There is no death, there is only the Force." << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
@@ -849,6 +851,7 @@ int main()
             if (enemySkill > 20)
             {
                 swGalaxy[3]->enemyNameCreate(); cout << ", a Jedi Master has entered the battlefield." << endl;
+                cout << setfill('`') << setw(77) << "`" << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
                 cout << playerName << ": A Jedi Master! Finally a worthy opponent." << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
@@ -866,6 +869,7 @@ int main()
             else if (enemySkill >= 11 && enemySkill <= 20)
             {
                 swGalaxy[0]->enemyNameCreate(); cout << ", a Jedi knight has entered the battlefield." << endl;
+                cout << setfill('`') << setw(77) << "`" << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
                 cout << playerName << ": A Jedi Knight?! Prove your worth Jedi!!" << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
@@ -882,6 +886,7 @@ int main()
             else if (enemySkill <= 10)
             {
                 swGalaxy[0]->enemyNameCreate(); cout << ", a padawan has entered the battlefield." << endl;
+                cout << setfill('`') << setw(77) << "`" << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
                 cout << playerName << ": You'll die in vain for your fragile order padawan." << endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(2000));
